@@ -1,0 +1,13 @@
+{
+  "name": "Embedded Linux DevEnv (Free)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential cmake ninja-build gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-system-arm qemu-system-x86 qemu-user-static flex bison libncurses5-dev libssl-dev python3 git rsync unzip bc",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  }
+}

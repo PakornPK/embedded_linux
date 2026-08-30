@@ -1,0 +1,62 @@
+# ==========================================
+# C / C++ & Build Artifacts
+# ==========================================
+# โฟลเดอร์ build และผลลัพธ์การคอมไพล์ทั้งหมด
+build/
+bin/
+lib/
+out/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.elf
+*.bin
+
+# ==========================================
+# CMake Artifacts
+# ==========================================
+# ไฟล์ cache และไฟล์ชั่วคราวที่ CMake สร้างขึ้น
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# Dependencies ที่ถูกดึงมาผ่าน FetchContent
+_deps/
+
+# ==========================================
+# IDEs & Text Editors (macOS / VS Code)
+# ==========================================
+# macOS System files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# VS Code (ยกเว้น .devcontainer)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# CLion / JetBrains
+.idea/
+
+# ==========================================
+# DevContainer & Docker Logs
+# ==========================================
+# ไม่ละทิ้ง .devcontainer/devcontainer.json
+# ละทิ้งเฉพาะไฟล์ log หรือ temp ใน container
+*.log
