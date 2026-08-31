@@ -1,19 +1,16 @@
 #pragma once
-#include <mutex>
+#include <atomic>
 
 class TelemetryStore {
 private:
-    float temperature_{0.0f};
-    mutable std::mutex mutex_;
+    std::atomic<float> temperature_{0.0f};
 
 public:
     void update_temperature(float temp) {
-        std::lock_guard<std::mutex> lock(mutex_);
-        temperature_ = temp;
+        temperature_.store(temp, std::memory_order_relaxed);
     }
 
     float get_temperature() const {
-        std::lock_guard<std::mutex> lock(mutex_);
-        return temperature_;
+        return temperature_.load(std::memory_order_relaxed);
     }
 };

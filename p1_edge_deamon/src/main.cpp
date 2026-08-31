@@ -55,6 +55,7 @@ int main(void) {
 
     cout << "Starting Edge Deamon on http://0.0.0.0:8080 ..." << endl;
     svr.listen("0.0.0.0", 8080);
+    running.store(false);
 
     return 0;
 }
