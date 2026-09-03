@@ -1,0 +1,21 @@
+[Unit]
+Description=P1 Edge Telemetry Daemon Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/p1_edge_daemon
+Restart=always
+RestartSec=3s
+
+# Standard output/error logging to systemd journal
+StandardOutput=journal
+StandardError=journal
+
+# Graceful Shutdown
+KillMode=mixed
+TimeoutStopSec=5s
+
+[Install]
+WantedBy=multi-user.target
